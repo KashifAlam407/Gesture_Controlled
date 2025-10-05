@@ -19,10 +19,6 @@ hand-detection/
 │   └── serial_receiver.ino       # Arduino sketch to read serial data & control servo
 │
 ├── docs/
-│   ├── hands_tree.md             # Hands() tree with explanations
-│   ├── drawing_utils_tree.md     # Drawing utils tree with explanations
-│   └── images/
-│       └── hand_landmarks.png    # Image showing 21 landmarks
 │
 └── README.md                     # You are here
 ```
