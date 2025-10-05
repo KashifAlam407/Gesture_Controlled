@@ -18,7 +18,7 @@ hand-detection/
 ├── arduino/
 │   └── serial_receiver.ino       # Arduino sketch to read serial data & control servo
 │
-├── docs/
+├── docs files
 │
 └── README.md                     # You are here
 ```
