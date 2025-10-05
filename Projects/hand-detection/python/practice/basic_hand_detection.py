@@ -1,3 +1,5 @@
+### This code is only for practice work, to use python code for your own project use main.py given inside python folder
+
 import cv2
 import mediapipe as mp
 
