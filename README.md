@@ -11,9 +11,9 @@ It serves both as a **learning reference** (documentation, trees, explanations) 
 gesture-control/
 │
 ├── docs/                    
-│   ├── mediapipe-tree.md      
-│   ├── opencv-basics.md       
-│   ├── serial-communication.md
+│   ├──      
+│   ├──       
+│   ├── 
 │   ├── images/
 │   │   ├── mediapipe_hand_tree.png
 │   │   ├── landmarks_example.png
