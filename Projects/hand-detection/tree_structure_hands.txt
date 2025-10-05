@@ -1,0 +1,35 @@
+mediapipe.solutions.hands          # MediaPipe "hands" solution module (prebuilt pipeline for detecting hand landmarks)
+
+   │
+   └── Hands (class)               # Main class for hand tracking — creates a hand detection + tracking model pipeline
+         │
+         └── hands = Hands(...)    # You create an object of Hands() with parameters like:
+         │                          # static_image_mode (True/False)
+         │                          # max_num_hands (default=2)
+         │                          # min_detection_confidence (0–1, default=0.5)
+         │                          # min_tracking_confidence (0–1, default=0.5)
+         │                          # → This initializes the ML model inside MediaPipe
+         │
+         └── process(image) (method)  # Method → Pass a BGR/RGB image here
+                │                     # It runs inference and gives you a "results" object
+                │
+                └── results (object)  # Output object returned by process()
+                       │
+                       ├── multi_hand_landmarks (attribute)  # Contains list of detected hands
+                       │        │
+                       │        └── [HandLandmark object]   # A list — one entry for each detected hand
+                       │                 │
+                       │                 └── landmark (list of 21 points)  
+                       │                         │
+                       │                         └── Landmark (each of the 21 points on hand)
+                       │                                ├── x (attribute) → normalized X coordinate (0–1 of image width)
+                       │                                ├── y (attribute) → normalized Y coordinate (0–1 of image height)
+                       │                                └── z (attribute) → relative depth (distance from camera, not absolute mm)
+                       │
+                       ├── multi_handedness (attribute)
+                       │        └── List of classification labels → tells if each hand is Left or Right
+                       │           Example: "Left" with confidence score 0.98
+                       │
+                       └── multi_hand_world_landmarks (attribute)
+                                └── Same 21 landmarks, but in **3D world coordinates (meters)** instead of normalized image space.
+                                   Useful for AR/VR, robotics, depth-based grasping.

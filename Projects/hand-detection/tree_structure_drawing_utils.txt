@@ -1,0 +1,32 @@
+mediapipe.solutions.drawing_utils          # Module for drawing landmarks & connections
+
+   │
+   ├── draw_landmarks(image, landmark_list, connections, ...) (function)
+   │      # Main function → draws landmarks & optional connections on an image
+   │      # Params:
+   │      # - image: the cv2 image (BGR)
+   │      # - landmark_list: list of detected landmarks (e.g., from results.multi_hand_landmarks[0])
+   │      # - connections: predefined edges (like HAND_CONNECTIONS) to join points
+   │      # - landmark_drawing_spec: style for points (color, radius, thickness)
+   │      # - connection_drawing_spec: style for lines (color, thickness)
+   │
+   ├── DrawingSpec (class)
+   │      # Defines how landmarks and connections look
+   │      # Attributes:
+   │      # - color: (R, G, B) tuple
+   │      # - thickness: line thickness
+   │      # - circle_radius: radius of points
+   │
+   ├── plot_landmarks(landmark_list, connections, ...) (function)
+   │      # Used with matplotlib (3D plots of landmarks, not OpenCV)
+   │      # Useful for visualizing hand/pose in 3D space
+   │
+   └── Predefined Connection Sets
+          ├── mp.solutions.hands.HAND_CONNECTIONS
+          │     # Set of edges connecting 21 hand landmarks (wrist → finger joints)
+          │
+          ├── mp.solutions.pose.POSE_CONNECTIONS
+          │     # Set of edges connecting human body pose landmarks
+          │
+          └── mp.solutions.face_mesh.FACEMESH_CONTOURS, FACEMESH_TESSELATION, etc.
+                # Sets of edges connecting face mesh landmarks (468 points)
