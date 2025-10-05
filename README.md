@@ -161,7 +161,7 @@ pip install opencv-python mediapipe pyserial
 
 ## 📜 License & Contribution
 
-This project is open source (add your LICENSE file, e.g. MIT).  
+This project is open source (MIT LICENSE).  
 Feel free to fork, contribute new projects, improve documentation, and submit pull requests.
 
 ---
